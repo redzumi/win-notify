@@ -54,10 +54,6 @@ namespace win_notify
 
         static void showNotification(Dictionary<string, string> options)
         {
-            Console.WriteLine(options["app"]);
-            Console.WriteLine(options["timeout"]);
-            Console.WriteLine(options["xml"]);
-
             // Load xml
             XmlDocument toastXml = new XmlDocument();
             toastXml.LoadXml(options["xml"]);
