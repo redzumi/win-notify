@@ -60,20 +60,17 @@ namespace win_notify
 
             // Create notf and listeners
             ToastNotification toast = new ToastNotification(toastXml);
-            toast.Activated += Toast_Activated;
-            toast.Dismissed += Toast_Dismissed;
-            toast.Failed += Toast_Failed;
+
+            toast.Activated     += Toast_Activated;
+            toast.Dismissed     += Toast_Dismissed;
+            toast.Failed        += Toast_Failed;
 
             // Show notf
             ToastNotificationManager.CreateToastNotifier(options["app"]).Show(toast);
 
-            if (options["timeout"] != "false")
-            {
-                if (options["timeout"] == "true")
-                    while (true) { Thread.Sleep(1000); }
-                else
-                    Thread.Sleep(int.Parse(options["timeout"]));
-            }
+            // Event expectation 
+            if (options["timeout"] == "true")
+                while (true) { Thread.Sleep(1000); }
         }
 
         private static void Toast_Activated(ToastNotification sender, object args)
