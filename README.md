@@ -14,10 +14,10 @@ win-notify.exe --app MyApp --timeout false --xml "<toast activationType='protoco
 required arguments:
   --app            	APP_ID for notification (will be shown in the notification bottom)
   --timeout			true or false (expectation for dismissing/activating event)
-  --xml				Toast template
+  --xml				Notification template
 ```
 
-## Toast Template
+## Notification template
 [[blogs.msdn.microsoft.com](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/02/adaptive-and-interactive-toast-notifications-for-windows-10/)]
 
 ```
