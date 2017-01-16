@@ -1,8 +1,6 @@
 win-notify
 ================
 
-Simple notifications app (win10).
-
 ## Usage
 ```
 win-notify.exe --app TestApp --timeout false --xml "<toast activationType='protocol' launch='http://google.com/'><visual><binding template='ToastGeneric'><text>Title</text><text>Body</text><image placement='appLogoOverride' src='file:///C:/test.jpg' hint-crop='circle' /></binding></visual></toast>"
